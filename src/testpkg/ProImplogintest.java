@@ -6,9 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pagepkg.FbloginPage;
+import pagepkg.ProImploginPage;
 
-public class Fblogintest {
+public class ProImplogintest {
 	WebDriver driver;
 	@BeforeTest 
 	public void setUp()
@@ -21,7 +21,7 @@ public class Fblogintest {
 	@Test 
 	public void test()
 	{
-		FbloginPage ob=new FbloginPage(driver) ;
+		ProImploginPage ob=new ProImploginPage(driver) ;
 		ob.setValues("joel.j@sbsol.in", "43fd312d89");
 		ob.login();
 		

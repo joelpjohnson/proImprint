@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-30T11:51:07 IST" name="Default suite" finished-at="2026-01-30T11:51:50 IST" duration-ms="42999">
+  <suite started-at="2026-01-30T16:46:40 IST" name="Default suite" finished-at="2026-01-30T16:47:32 IST" duration-ms="52350">
     <groups>
     </groups>
-    <test started-at="2026-01-30T11:51:07 IST" name="Default test" finished-at="2026-01-30T11:51:50 IST" duration-ms="42999">
-      <class name="testpkg.Fblogintest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testpkg.Fblogintest@74e52ef6]" started-at="2026-01-30T11:51:07 IST" name="setUp" finished-at="2026-01-30T11:51:49 IST" duration-ms="42388" status="PASS">
+    <test started-at="2026-01-30T16:46:40 IST" name="Default test" finished-at="2026-01-30T16:47:32 IST" duration-ms="52350">
+      <class name="testpkg.ProImplogintest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testpkg.ProImplogintest@4a067c25]" started-at="2026-01-30T16:46:40 IST" name="setUp" finished-at="2026-01-30T16:47:31 IST" duration-ms="51370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test()[pri:0, instance:testpkg.Fblogintest@74e52ef6]" started-at="2026-01-30T11:51:49 IST" name="test" finished-at="2026-01-30T11:51:50 IST" duration-ms="528" status="PASS">
+        <test-method signature="test()[pri:0, instance:testpkg.ProImplogintest@4a067c25]" started-at="2026-01-30T16:47:31 IST" name="test" finished-at="2026-01-30T16:47:32 IST" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-      </class> <!-- testpkg.Fblogintest -->
+      </class> <!-- testpkg.ProImplogintest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

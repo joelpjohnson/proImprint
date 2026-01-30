@@ -3,7 +3,7 @@ package pagepkg;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver;
-public class FbloginPage {
+public class ProImploginPage {
 
 	  By emailField = By.id("login_mail");
 	  By passwordField =By.id("login_password");
@@ -11,7 +11,7 @@ public class FbloginPage {
 WebDriver driver;//this is an instance variable 
 //driver details has to be initialzed in it using constructor 
 //class name and constructor name should be the same
-public FbloginPage(WebDriver driver) {
+public ProImploginPage(WebDriver driver) {
 	// TODO Auto-generated constructor stub
 	this.driver=driver;
 	
