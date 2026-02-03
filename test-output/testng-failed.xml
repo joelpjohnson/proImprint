@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpkg.Fblogintest">
+      <class name="testpkg.ProImploginWithPageFactorytest">
         <methods>
-          <include name="test"/>
           <include name="setUp"/>
+          <include name="cart"/>
         </methods>
-      </class> <!-- testpkg.Fblogintest -->
+      </class> <!-- testpkg.ProImploginWithPageFactorytest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

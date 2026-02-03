@@ -1,4 +1,5 @@
-package testpkg;
+  package testpkg;
+  ///this is done using without page factory 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ public class ProImplogintest {
 	public void setUp()
 	{
 		driver =new ChromeDriver ();
+		
 		driver.get("https://www.proimprint.com/");
 		   driver.findElement(By.xpath("//b[normalize-space()='Sign in']")).click();
 	}
