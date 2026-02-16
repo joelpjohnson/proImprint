@@ -11,16 +11,8 @@ import org.testng.annotations.Test;
 import pagepkg.CartTextFinderPage;
 import pagepkg.ProImprintWithPageFactoryPage;
 
-public class ProImploginWithPageFactorytest {
-	WebDriver driver;
-	@BeforeTest 
-	public void setUp()
-	{
-		driver =new ChromeDriver ();
-		
-		driver.get("https://www.proimprint.com/");
-		   driver.findElement(By.xpath("//b[normalize-space()='Sign in']")).click();
-	}
+public class ProImploginWithPageFactorytest  extends BaseClass{
+
 	
 	@Test (priority =1)
 	public void test()
