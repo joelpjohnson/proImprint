@@ -12,13 +12,13 @@ import pagepkg.SignUpPage;
 
 public class ProImplogintest extends BaseClass {
 
-//    @Test(priority = 0)
-//    public void loginTest() {
-//
-//        ProImploginPage ob = new ProImploginPage(driver);
-//        ob.setValues("joel.j@sbsol.in", "d67ad174bf");
-//        ob.login();
-//    }
+    @Test(priority = 0)
+    public void loginTest() {
+
+        ProImploginPage ob = new ProImploginPage(driver);
+        ob.setValues("joel.j@sbsol.in", "d67ad174bf");
+        ob.login();
+    }
 
 //    @Test(priority = 2)
 //    public void cartTest() {
@@ -32,12 +32,18 @@ public class ProImplogintest extends BaseClass {
 //        Assert.assertTrue(pageSrc.contains("Update"),
 //                "Title comparison failed");
 //    }
-//    @Test(priority = 1)
+    @Test(priority = 1)
+    public void searchTest() {
+
+        SearchPage search = new SearchPage(driver);
+        search.searchProduct("PI22906");
+
+    }
+//    @Test(priority = 1, dependsOnMethods = "loginTest")
 //    public void searchTest() {
 //
 //        SearchPage search = new SearchPage(driver);
 //        search.searchProduct("PI22906");
-//
 //    }
 //    @Test(priority = 3)
 //    public void contactUS() {
@@ -53,31 +59,31 @@ public class ProImplogintest extends BaseClass {
 //        );
 //    }
 //    
-	@Test(priority = 1)
-	public void signUp() {
-
-	    SignUpPage signup = new SignUpPage(driver);
-
-	    signup.clickPopupSignUp();   // 🔥 FIRST CLICK POPUP BUTTON
-
-	    String uniqueEmail = "joel" + System.currentTimeMillis() + "@sbsol.in";
-	    String altEmail = "alt" + System.currentTimeMillis() + "@sbsol.in";
-
-	    signup.registerUser(
-	            "Joel",
-	            "Tester",
-	            uniqueEmail,
-	            altEmail,
-	            "9876543210",
-	            "9123456780",
-	            "04842556677",
-	            "Test@123",
-	            "Test@123"
-	    );
-
-	    Assert.assertTrue(driver.getCurrentUrl().contains("account"),
-	            "Sign up failed - user not redirected");
-	}
+//	@Test(priority = 1)
+//	public void signUp() {
+//
+//	    SignUpPage signup = new SignUpPage(driver);
+//
+//	    signup.clickPopupSignUp();   // 🔥 FIRST CLICK POPUP BUTTON
+//
+//	    String uniqueEmail = "joel" + System.currentTimeMillis() + "@sbsol.in";
+//	    String altEmail = "alt" + System.currentTimeMillis() + "@sbsol.in";
+//
+//	    signup.registerUser(
+//	            "Joel",
+//	            "Tester",
+//	            uniqueEmail,
+//	            altEmail,
+//	            "9876543210",
+//	            "9123456780",
+//	            "04842556677",
+//	            "Test@123",
+//	            "Test@123"
+//	    );
+//
+//	    Assert.assertTrue(driver.getCurrentUrl().contains("account"),
+//	            "Sign up failed - user not redirected");
+//	}
 
 
 

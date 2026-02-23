@@ -19,18 +19,29 @@ public class SearchPage {
         this.driver = driver;
     }
 
+//    public void searchProduct(String productId) {
+//
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(0));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(searchBox));
+//
+//      //  driver.findElement(searchBox).clear();
+//        driver.findElement(searchBox).sendKeys(productId);
+//
+//        // Option 1: Press Enter
+//        driver.findElement(searchBox).sendKeys(Keys.ENTER);
+//
+//        // Option 2: Click search button (if needed)
+//        // driver.findElement(searchButton).click();
+//    }
     public void searchProduct(String productId) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(0));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(searchBox));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
-      //  driver.findElement(searchBox).clear();
+        // Wait until search box is clickable
+        wait.until(ExpectedConditions.elementToBeClickable(searchBox));
+
+        driver.findElement(searchBox).clear();
         driver.findElement(searchBox).sendKeys(productId);
-
-        // Option 1: Press Enter
         driver.findElement(searchBox).sendKeys(Keys.ENTER);
-
-        // Option 2: Click search button (if needed)
-        // driver.findElement(searchButton).click();
     }
 }

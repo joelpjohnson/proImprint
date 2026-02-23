@@ -6,7 +6,7 @@
       <class name="testpkg.ProImplogintest">
         <methods>
           <include name="setUp"/>
-          <include name="signUp"/>
+          <include name="loginTest"/>
         </methods>
       </class> <!-- testpkg.ProImplogintest -->
     </classes>

@@ -24,8 +24,21 @@ public class ProImploginPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
         driver.findElement(passwordField).sendKeys(password);
     }
-
+//
+//    public void login() {
+//        driver.findElement(loginButton).click();
+//    }
     public void login() {
+
         driver.findElement(loginButton).click();
+
+        // Wait until full page load completes
+        wait.until(ExpectedConditions.jsReturnsValue(
+                "return document.readyState === 'complete';"
+        ));
+
+        // Wait until URL changes after login
+        wait.until(ExpectedConditions.urlContains("account"));
     }
+
 }
