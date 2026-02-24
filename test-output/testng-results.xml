@@ -1,73 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-23T09:37:35 IST" name="Suite" finished-at="2026-02-23T09:38:05 IST" duration-ms="30529">
+  <suite started-at="2026-02-24T13:44:46 IST" name="Suite" finished-at="2026-02-24T13:45:10 IST" duration-ms="23461">
     <groups>
     </groups>
-    <test started-at="2026-02-23T09:37:35 IST" name="Test" finished-at="2026-02-23T09:38:05 IST" duration-ms="30529">
+    <test started-at="2026-02-24T13:44:46 IST" name="Test" finished-at="2026-02-24T13:45:10 IST" duration-ms="23461">
       <class name="testpkg.ProImplogintest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testpkg.ProImplogintest@1a677343]" started-at="2026-02-23T09:37:35 IST" name="setUp" finished-at="2026-02-23T09:37:42 IST" duration-ms="6580" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:44:46 IST" name="setUp" finished-at="2026-02-24T13:44:51 IST" duration-ms="4713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:testpkg.ProImplogintest@1a677343]" started-at="2026-02-23T09:37:42 IST" name="loginTest" finished-at="2026-02-23T09:38:03 IST" duration-ms="21117" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for js return document.readyState === 'complete'; to be executable (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.76, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38077}, goog:processID: 13580, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:38077/devtoo..., se:cdpVersion: 145.0.7632.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d578f2f5cad599966446ac8c9bdec5de]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for js return document.readyState === 'complete'; to be executable (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.76, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38077}, goog:processID: 13580, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:38077/devtoo..., se:cdpVersion: 145.0.7632.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d578f2f5cad599966446ac8c9bdec5de
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pagepkg.ProImploginPage.login(ProImploginPage.java:36)
-at testpkg.ProImplogintest.loginTest(ProImplogintest.java:20)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="loginTest()[pri:0, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:44:51 IST" name="loginTest" finished-at="2026-02-24T13:45:04 IST" duration-ms="12984" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="searchTest()[pri:1, instance:testpkg.ProImplogintest@1a677343]" started-at="2026-02-23T09:38:03 IST" name="searchTest" finished-at="2026-02-23T09:38:05 IST" duration-ms="2719" status="PASS">
+        <test-method signature="searchTest()[pri:1, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:45:04 IST" name="searchTest" finished-at="2026-02-24T13:45:06 IST" duration-ms="2620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
+        <test-method signature="productSelectionTest()[pri:2, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:45:06 IST" name="productSelectionTest" finished-at="2026-02-24T13:45:09 IST" duration-ms="3062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productSelectionTest -->
       </class> <!-- testpkg.ProImplogintest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

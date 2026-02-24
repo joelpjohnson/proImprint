@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import pagepkg.CartTextFinderPage;
 import pagepkg.ProImploginPage;
+import pagepkg.ProductPage;
 import pagepkg.QuickContactPage;
 import pagepkg.SearchPage;
 import pagepkg.SignUpPage;
@@ -38,6 +39,16 @@ public class ProImplogintest extends BaseClass {
         SearchPage search = new SearchPage(driver);
         search.searchProduct("PI22906");
 
+    }
+    @Test(priority = 2)
+    public void productSelectionTest() {
+
+        ProductPage product = new ProductPage(driver);
+
+        product.selectColor();
+        product.selectImprintColor("Yellow 116");
+        product.enterQuantity("101");
+        product.clickAddToCart();
     }
 //    @Test(priority = 1, dependsOnMethods = "loginTest")
 //    public void searchTest() {
