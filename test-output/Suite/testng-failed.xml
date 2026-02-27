@@ -3,14 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testpkg.ProImplogintest">
+      <class name="tests.user.ProImplogintest">
         <methods>
+          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="productSelectionTest"/>
-          <include name="searchTest"/>
           <include name="loginTest"/>
+          <include name="searchTest"/>
         </methods>
-      </class> <!-- testpkg.ProImplogintest -->
+      </class> <!-- tests.user.ProImplogintest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

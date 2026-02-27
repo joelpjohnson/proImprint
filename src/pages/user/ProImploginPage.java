@@ -1,4 +1,4 @@
-package pagepkg;
+package pages.user;
 
 import java.time.Duration;
 import org.openqa.selenium.By;

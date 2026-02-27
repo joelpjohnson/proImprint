@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Login Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Login Test(failed)">
-    <parameter name="password" value="Test@123"/>
-    <parameter name="username" value="testuser@gmail.com"/>
+<suite name="Failed suite [Admin Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Admin Tests(failed)">
     <classes>
-      <class name="testngpkg.LoginTest">
+      <class name="tests.admin.AdminLoginTest">
         <methods>
-          <include name="loginTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="adminLogin"/>
         </methods>
-      </class> <!-- testngpkg.LoginTest -->
+      </class> <!-- tests.admin.AdminLoginTest -->
     </classes>
-  </test> <!-- Login Test(failed) -->
-</suite> <!-- Failed suite [Login Suite] -->
+  </test> <!-- Admin Tests(failed) -->
+</suite> <!-- Failed suite [Admin Suite] -->

@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-24T13:44:46 IST" name="Suite" finished-at="2026-02-24T13:45:10 IST" duration-ms="23461">
+  <suite started-at="2026-02-27T09:10:18 IST" name="Admin Suite" finished-at="2026-02-27T09:10:23 IST" duration-ms="5076">
     <groups>
     </groups>
-    <test started-at="2026-02-24T13:44:46 IST" name="Test" finished-at="2026-02-24T13:45:10 IST" duration-ms="23461">
-      <class name="testpkg.ProImplogintest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:44:46 IST" name="setUp" finished-at="2026-02-24T13:44:51 IST" duration-ms="4713" status="PASS">
+    <test started-at="2026-02-27T09:10:18 IST" name="Admin Tests" finished-at="2026-02-27T09:10:23 IST" duration-ms="5076">
+      <class name="tests.admin.AdminLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.admin.AdminLoginTest@489115ef]" started-at="2026-02-27T09:10:18 IST" name="setUp" finished-at="2026-02-27T09:10:20 IST" duration-ms="2763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:44:51 IST" name="loginTest" finished-at="2026-02-24T13:45:04 IST" duration-ms="12984" status="PASS">
+        <test-method signature="adminLogin()[pri:0, instance:tests.admin.AdminLoginTest@489115ef]" started-at="2026-02-27T09:10:20 IST" name="adminLogin" finished-at="2026-02-27T09:10:23 IST" duration-ms="2241" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method signature="searchTest()[pri:1, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:45:04 IST" name="searchTest" finished-at="2026-02-24T13:45:06 IST" duration-ms="2620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTest -->
-        <test-method signature="productSelectionTest()[pri:2, instance:testpkg.ProImplogintest@15de0b3c]" started-at="2026-02-24T13:45:06 IST" name="productSelectionTest" finished-at="2026-02-24T13:45:09 IST" duration-ms="3062" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productSelectionTest -->
-      </class> <!-- testpkg.ProImplogintest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- adminLogin -->
+      </class> <!-- tests.admin.AdminLoginTest -->
+    </test> <!-- Admin Tests -->
+  </suite> <!-- Admin Suite -->
 </testng-results>

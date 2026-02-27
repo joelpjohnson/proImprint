@@ -1,4 +1,4 @@
-package pagepkg;
+package pages.user;
 //this is done using without page factory 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

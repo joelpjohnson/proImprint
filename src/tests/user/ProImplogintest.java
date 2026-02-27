@@ -1,26 +1,32 @@
-package testpkg;
+package tests.user;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pagepkg.CartTextFinderPage;
-import pagepkg.ProImploginPage;
-import pagepkg.ProductPage;
-import pagepkg.QuickContactPage;
-import pagepkg.SearchPage;
-import pagepkg.SignUpPage;
+import base.BaseClass;
+import pages.user.CartTextFinderPage;
+import pages.user.ProImploginPage;
+import pages.user.ProductPage;
+import pages.user.QuickContactPage;
+import pages.user.SearchPage;
+import pages.user.SignUpPage;
 
-public class ProImplogintest extends BaseClass {
+public class ProImplogintest extends BaseClass  {
 
-    @Test(priority = 0)
-    public void loginTest() {
+  
 
-        ProImploginPage ob = new ProImploginPage(driver);
-        ob.setValues("joel.j@sbsol.in", "d67ad174bf");
-        ob.login();
-    }
+	@Test(priority=0)
+	public void loginTest() {
 
+	    driver.get("https://www.proimprint.com/");
+	    driver.findElement(By.xpath("//b[normalize-space()='Sign in']")).click();
+	    ProImploginPage ob = new ProImploginPage(driver);
+	    ob.setValues("joel.j@sbsol.in", "d67ad174bf");
+	    ob.login();
+	}
 //    @Test(priority = 2)
 //    public void cartTest() {
 //
