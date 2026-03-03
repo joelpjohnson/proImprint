@@ -16,7 +16,7 @@ public class ProductPage {
     By addToCartBtn = By.id("button-cart");       // inspect actual ID
     By imprintColorDropdown = By.id("pmsoption140486_msdd");
     By yellowOption = By.xpath("//span[text()='Yellow 116']");
-
+    By proceedToCheckoutBtn = By.id("proceedtocheckout");
     public ProductPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -57,5 +57,21 @@ public class ProductPage {
 
     public void clickAddToCart() {
         wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn)).click();
+    }
+//    public void clickProceedToCheckout() {
+//
+//        WebElement checkoutBtn = wait.until(
+//                ExpectedConditions.elementToBeClickable(proceedToCheckoutBtn));
+//
+//        checkoutBtn.click();
+//    }
+    public void clickProceedToCheckout() {
+
+        By checkoutBtn = By.id("proceedtocheckout");
+
+        WebElement btn = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(checkoutBtn));
+
+        wait.until(ExpectedConditions.elementToBeClickable(btn)).click();
     }
 }

@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import base.BaseClass;
 import pages.user.CartTextFinderPage;
+import pages.user.CheckoutPage;
 import pages.user.ProImploginPage;
 import pages.user.ProductPage;
 import pages.user.QuickContactPage;
@@ -55,6 +56,19 @@ public class ProImplogintest extends BaseClass  {
         product.selectImprintColor("Yellow 116");
         product.enterQuantity("101");
         product.clickAddToCart();
+        product.clickProceedToCheckout();
+    }
+    @Test(priority = 3)
+    public void shippingSelectionTest() {
+
+        CheckoutPage checkout = new CheckoutPage(driver);
+
+        checkout.selectBestShippingMethod();
+    //  checkout.clickSaveAndContinueAndSelectPayAfter();
+      checkout.completeCheckoutFlow();
+      //  checkout.clickSaveAndContinueRobust();
+       // checkout.selectPayAfterArtwork();
+      //  checkout.selectPayAfterApprovalOfArtwork();
     }
 //    @Test(priority = 1, dependsOnMethods = "loginTest")
 //    public void searchTest() {
