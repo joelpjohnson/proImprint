@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import base.BaseClass;
 import pages.user.CartTextFinderPage;
 import pages.user.CheckoutPage;
+import pages.user.CheckoutSuccessPage;
 import pages.user.ProImploginPage;
 import pages.user.ProductPage;
 import pages.user.QuickContactPage;
@@ -69,6 +70,16 @@ public class ProImplogintest extends BaseClass  {
       //  checkout.clickSaveAndContinueRobust();
        // checkout.selectPayAfterArtwork();
       //  checkout.selectPayAfterApprovalOfArtwork();
+    }
+    @Test(priority = 4)
+    public void checkoutSuccessTest() {
+
+        CheckoutSuccessPage successPage = new CheckoutSuccessPage(driver);
+
+        String orderId = successPage.getOrderId();
+
+        Assert.assertNotNull(orderId);
+        System.out.println("Order ID captured for Admin validation: " + orderId);
     }
 //    @Test(priority = 1, dependsOnMethods = "loginTest")
 //    public void searchTest() {

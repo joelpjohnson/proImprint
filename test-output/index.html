@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.user.ProImplogintest" class="method navigator-link" hash-for-method="checkoutSuccessTest">checkoutSuccessTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.user.ProImplogintest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
@@ -139,6 +144,13 @@
               <span class="class-name">tests.user.ProImplogintest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkoutSuccessTest">
+                  </a> <!-- checkoutSuccessTest -->
+                  <span class="method-name">checkoutSuccessTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="loginTest">
@@ -221,28 +233,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'shippingSelectionTest')
+data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'tests.user.ProImplogintest')
-data.setCell(0, 3, 8689);
+data.setCell(0, 3, 16307);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'productSelectionTest')
+data.setCell(1, 1, 'shippingSelectionTest')
 data.setCell(1, 2, 'tests.user.ProImplogintest')
-data.setCell(1, 3, 6500);
+data.setCell(1, 3, 12436);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginTest')
+data.setCell(2, 1, 'productSelectionTest')
 data.setCell(2, 2, 'tests.user.ProImplogintest')
-data.setCell(2, 3, 5570);
+data.setCell(2, 3, 6565);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'searchTest')
 data.setCell(3, 2, 'tests.user.ProImplogintest')
-data.setCell(3, 3, 2724);
+data.setCell(3, 3, 3553);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'checkoutSuccessTest')
+data.setCell(4, 2, 'tests.user.ProImplogintest')
+data.setCell(4, 3, 203);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -275,19 +291,23 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">2941 ms</span>
+                <span class="method-start">2249 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchTest</span>
-                <span class="method-start">8520 ms</span>
+                <span class="method-start">18566 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">productSelectionTest</span>
-                <span class="method-start">11253 ms</span>
+                <span class="method-start">22123 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">shippingSelectionTest</span>
-                <span class="method-start">17760 ms</span>
+                <span class="method-start">28695 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkoutSuccessTest</span>
+                <span class="method-start">41136 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

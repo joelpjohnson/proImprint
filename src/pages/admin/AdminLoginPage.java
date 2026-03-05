@@ -30,4 +30,5 @@ public class AdminLoginPage {
 
         wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
     }
+    
 }
