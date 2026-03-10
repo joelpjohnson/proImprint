@@ -5,6 +5,7 @@
     <classes>
       <class name="tests.admin.AdminLoginTest">
         <methods>
+          <include name="searchAndOpenOrder"/>
           <include name="setUp"/>
           <include name="adminLogin"/>
         </methods>

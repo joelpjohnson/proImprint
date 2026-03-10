@@ -15,6 +15,8 @@ import pages.user.ProductPage;
 import pages.user.QuickContactPage;
 import pages.user.SearchPage;
 import pages.user.SignUpPage;
+import utils.OrderDataManager;
+import utils.TestDataStore;
 
 public class ProImplogintest extends BaseClass  {
 
@@ -71,15 +73,16 @@ public class ProImplogintest extends BaseClass  {
        // checkout.selectPayAfterArtwork();
       //  checkout.selectPayAfterApprovalOfArtwork();
     }
-    @Test(priority = 4)
-    public void checkoutSuccessTest() {
+    @Test(priority=4)
+    public void CheckoutSuccessPage() {
 
-        CheckoutSuccessPage successPage = new CheckoutSuccessPage(driver);
+        CheckoutSuccessPage success = new CheckoutSuccessPage(driver);
 
-        String orderId = successPage.getOrderId();
+        String orderId = success.getOrderId();
 
-        Assert.assertNotNull(orderId);
-        System.out.println("Order ID captured for Admin validation: " + orderId);
+        OrderDataManager.saveOrderId(orderId);
+
+        System.out.println("Order ID saved: " + orderId);
     }
 //    @Test(priority = 1, dependsOnMethods = "loginTest")
 //    public void searchTest() {

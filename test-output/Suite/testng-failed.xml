@@ -5,8 +5,10 @@
     <classes>
       <class name="tests.user.ProImplogintest">
         <methods>
+          <include name="CheckoutSuccessPage"/>
           <include name="shippingSelectionTest"/>
           <include name="setUp"/>
+          <include name="productSelectionTest"/>
         </methods>
       </class> <!-- tests.user.ProImplogintest -->
     </classes>
