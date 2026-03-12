@@ -1,5 +1,7 @@
 package tests.user;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -43,13 +45,29 @@ public class ProImplogintest extends BaseClass  {
 //        Assert.assertTrue(pageSrc.contains("Update"),
 //                "Title comparison failed");
 //    }
-    @Test(priority = 1)
-    public void searchTest() {
+	@Test(priority = 1)
+	public void searchTest() {
 
-        SearchPage search = new SearchPage(driver);
-        search.searchProduct("PI22906");
+	    Scanner scanner = new Scanner(System.in);
 
-    }
+	    String defaultProduct = "PI22906";
+	    String productToSearch = defaultProduct;
+
+	    System.out.println("Do you wish to search for any particular product?");
+	    System.out.println("Press Y to enter product ID OR N to continue with default product (PI22906)");
+
+	    String choice = scanner.nextLine().trim().toUpperCase();
+
+	    if (choice.equals("Y")) {
+	        System.out.println("Enter Product ID:");
+	        productToSearch = scanner.nextLine().trim();
+	    }
+
+	    SearchPage search = new SearchPage(driver);
+	    search.searchProduct(productToSearch);
+
+	    System.out.println("Product searched: " + productToSearch);
+	}
     @Test(priority = 2)
     public void productSelectionTest() {
 

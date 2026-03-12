@@ -7,8 +7,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdminOrderPage {
@@ -75,6 +75,7 @@ public class AdminOrderPage {
 
         System.out.println("Order searched in admin: " + orderId);
     }
+    //===========open order==============
     public void openOrder(String orderId) {
 
         By orderLink = By.xpath("//a[contains(@href,'order_id=" + orderId + "') and contains(text(),'" + orderId + "')]");
@@ -96,5 +97,137 @@ public class AdminOrderPage {
 
         System.out.println("Current URL after click: " + driver.getCurrentUrl());
     }
+ // ================= OPEN ORDER HISTORY TAB =================
+    public void openOrderHistory() {
 
+        By orderHistoryTab = By.id("order_his");
+
+        WebElement tab = wait.until(
+                ExpectedConditions.elementToBeClickable(orderHistoryTab));
+
+        tab.click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.id("tab-orderhis")));
+
+        System.out.println("Order History tab opened");
+    }
+ // ================= UPLOAD ARTWORK PROOFS =================
+    public void uploadArtworkProofs(int productCount, String approveFile, String rejectFile) {
+
+        int defaultDropdowns = productCount;
+        int requiredDropdowns = productCount * 2;
+        int addMoreClicks = requiredDropdowns - defaultDropdowns;
+
+        By addMoreBtn = By.xpath("//input[@value='Add More']");
+
+        // Add required dropdowns
+        for (int i = 1; i <= addMoreClicks; i++) {
+
+            WebElement addMore = wait.until(
+                    ExpectedConditions.elementToBeClickable(addMoreBtn));
+
+            addMore.click();
+
+            System.out.println("Clicked Add More to create extra slot " + (defaultDropdowns + i));
+        }
+
+        // Now upload files
+        for (int i = 1; i <= requiredDropdowns; i++) {
+
+            // Select dropdown
+            By dropdownLocator = By.id("productassign" + i);
+
+            WebElement dropdown = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(dropdownLocator));
+
+            Select select = new Select(dropdown);
+
+            // Determine product number
+            int productIndex = (i % productCount == 0) ? productCount : (i % productCount);
+
+            select.selectByIndex(productIndex);
+
+            System.out.println("Product selected in dropdown " + i);
+
+            // Wait for file upload field
+            By fileLocator = By.id("artwork_proof" + i);
+
+            WebElement upload = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(fileLocator));
+
+            // mandatory wait (as you required)
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Upload correct file
+            if (i % 2 != 0) {
+
+                upload.sendKeys(approveFile);
+                System.out.println("Approval file uploaded in slot " + i);
+
+            } else {
+
+                upload.sendKeys(rejectFile);
+                System.out.println("Rejection file uploaded in slot " + i);
+            }
+        }
+    }
+ // ================= UPLOAD ARTWORK PROOFS =================
+//    public void uploadArtworkProofs(int productCount, String approveFile, String rejectFile) {
+//
+//        for (int i = 1; i <= productCount; i++) {
+//
+//            // Select product dropdown
+//            By dropdownLocator = By.id("productassign" + i);
+//
+//            WebElement dropdown = wait.until(
+//                    ExpectedConditions.visibilityOfElementLocated(dropdownLocator));
+//
+//            Select select = new Select(dropdown);
+//
+//            select.selectByIndex(1);
+//
+//            System.out.println("Product selected in dropdown " + i);
+//
+//            // Wait for file upload input to appear
+//            By fileLocator = By.id("artwork_proof" + i);
+//
+//            WebElement upload = wait.until(
+//                    ExpectedConditions.visibilityOfElementLocated(fileLocator));
+//
+//            // 🔵 ALWAYS wait 2 seconds after it becomes visible
+//            try {
+//                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//
+//            // Upload approval file
+//            upload.sendKeys(approveFile);
+//
+//            System.out.println("Approval file uploaded for product " + i);
+//
+//            // Select again for rejection
+//            select.selectByIndex(1);
+//
+//            upload = wait.until(
+//                    ExpectedConditions.visibilityOfElementLocated(fileLocator));
+//
+//            // 🔵 Again wait 2 seconds
+//            try {
+//                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//
+//            // Upload rejection file
+//            upload.sendKeys(rejectFile);
+//
+//            System.out.println("Rejection file uploaded for product " + i);
+//        }
+//    }
 }

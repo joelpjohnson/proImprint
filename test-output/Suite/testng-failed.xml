@@ -9,6 +9,7 @@
           <include name="shippingSelectionTest"/>
           <include name="setUp"/>
           <include name="productSelectionTest"/>
+          <include name="searchTest"/>
         </methods>
       </class> <!-- tests.user.ProImplogintest -->
     </classes>

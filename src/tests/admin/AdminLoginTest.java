@@ -32,7 +32,17 @@ public class AdminLoginTest extends BaseClass {
         orderPage.searchOrder(orderId);
 
         orderPage.openOrder(orderId);
-
+        orderPage.openOrderHistory();
         System.out.println("Order opened in admin: " + orderId);
+    }
+    @Test(priority = 3, dependsOnMethods = "searchAndOpenOrder")
+    public void uploadArtworkFiles() {
+
+        AdminOrderPage orderPage = new AdminOrderPage(driver);
+
+        String approveFile = "C:\\Users\\joel.j\\eclipse-workspace\\webdriverProject\\TestFiles\\approve.pdf";
+        String rejectFile  = "C:\\Users\\joel.j\\eclipse-workspace\\webdriverProject\\TestFiles\\reject.pdf";
+
+        orderPage.uploadArtworkProofs(2, approveFile, rejectFile);
     }
 }

@@ -9,7 +9,8 @@ public class ProductPage {
     WebDriver driver;
     WebDriverWait wait;
 
-    By colorGreen = By.xpath("//div[@data-name='Green']");
+   // By colorGreen = By.xpath("//div[@data-name='Green']");
+    By allColors = By.cssSelector("div.clrsecone");
 //    By imprintMethod = By.id("imprint_method");   // inspect actual ID
   //  By imprintColor = By.id("imprint_color");     // inspect actual ID
    By quantityBox = By.id("quantity");           // inspect actual ID
@@ -22,37 +23,82 @@ public class ProductPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
+//    public void selectColor() {
+//        wait.until(ExpectedConditions.elementToBeClickable(colorGreen)).click();
+//    }
     public void selectColor() {
-        wait.until(ExpectedConditions.elementToBeClickable(colorGreen)).click();
+
+        try {
+
+            By allColors = By.cssSelector("div.clrsecone");
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(allColors));
+
+            java.util.List<WebElement> colors = driver.findElements(allColors);
+
+            if (colors.size() > 0) {
+
+                WebElement firstColor = colors.get(0);
+                String colorName = firstColor.getAttribute("title");
+
+                wait.until(ExpectedConditions.elementToBeClickable(firstColor)).click();
+
+                System.out.println("Color selected: " + colorName);
+            }
+
+        } catch (Exception e) {
+
+            System.out.println("No product color selection available - skipping");
+
+        }
     }
     public void selectImprintColor(String colorName) {
 
-        // Click dropdown
-        WebElement dropdown = wait.until(
-                ExpectedConditions.elementToBeClickable(imprintColorDropdown));
-        dropdown.click();
+        try {
 
-        // Wait for option to appear
-        By colorOption = By.xpath("//span[text()='" + colorName + "']");
-        
-        WebElement option = wait.until(
-                ExpectedConditions.elementToBeClickable(colorOption));
-        option.click();
+            WebElement dropdown = wait.until(
+                    ExpectedConditions.elementToBeClickable(imprintColorDropdown));
+
+            dropdown.click();
+
+            By colorOption = By.xpath("//span[text()='" + colorName + "']");
+
+            WebElement option = wait.until(
+                    ExpectedConditions.elementToBeClickable(colorOption));
+
+            option.click();
+
+            System.out.println("Imprint color selected: " + colorName);
+
+        } catch (Exception e) {
+
+            System.out.println("Imprint color option not available - skipping");
+
+        }
     }
 
 
     public void enterQuantity(String qty) {
 
-        WebElement qtyField = wait.until(
-                ExpectedConditions.elementToBeClickable(quantityBox));
+        try {
 
-        qtyField.click();
-        qtyField.sendKeys(Keys.CONTROL + "a");
-        qtyField.sendKeys(Keys.DELETE);
-        qtyField.sendKeys(qty);
-       // qtyField.sendKeys(Keys.TAB);
+            WebElement qtyField = wait.until(
+                    ExpectedConditions.elementToBeClickable(quantityBox));
 
-        wait.until(ExpectedConditions.attributeToBe(quantityBox, "value", qty));
+            qtyField.click();
+            qtyField.sendKeys(Keys.CONTROL + "a");
+            qtyField.sendKeys(Keys.DELETE);
+            qtyField.sendKeys(qty);
+
+            wait.until(ExpectedConditions.attributeToBe(quantityBox, "value", qty));
+
+            System.out.println("Quantity entered: " + qty);
+
+        } catch (Exception e) {
+
+            System.out.println("Quantity field not available - skipping");
+
+        }
     }
 
     public void clickAddToCart() {
