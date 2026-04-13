@@ -9,18 +9,28 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Admin Suite</th></tr>
-<tr><td><a href="#t0">Admin Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">18,736</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Admin Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">27,933</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Admin Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.admin.AdminLoginTest</td><td><a href="#m0">uploadArtworkFiles</a></td><td rowspan="1">1773305474461</td><td rowspan="1">2795</td></tr><tr><th colspan="4">Admin Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.admin.AdminLoginTest</td><td><a href="#m1">adminLogin</a></td><td rowspan="1">1773305462792</td><td rowspan="1">2311</td></tr><tr class="passedeven"><td><a href="#m2">searchAndOpenOrder</a></td><td rowspan="1">1773305465143</td><td rowspan="1">9310</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Admin Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.admin.AdminLoginTest</td><td><a href="#m0">uploadArtworkFiles</a></td><td rowspan="1">1776077980556</td><td rowspan="1">10746</td></tr><tr><th colspan="4">Admin Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.admin.AdminLoginTest</td><td><a href="#m1">adminLogin</a></td><td rowspan="1">1776077967742</td><td rowspan="1">3039</td></tr><tr class="passedeven"><td><a href="#m2">searchAndOpenOrder</a></td><td rowspan="1">1776077970803</td><td rowspan="1">9748</td></tr></tbody>
 </table>
-<h2>Admin Tests</h2><h3 id="m0">tests.admin.AdminLoginTest#uploadArtworkFiles</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 2
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+<h2>Admin Tests</h2><h3 id="m0">tests.admin.AdminLoginTest#uploadArtworkFiles</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token &apos;&lt;&apos;}
+  (Session info: chrome=146.0.7680.178): SyntaxError: Unexpected token &apos;&lt;&apos;
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:318)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:173)
-	at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:149)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eebdedc555663884035d80d308ebbf00, sendKeysToElement {value=[Ljava.lang.CharSequence;@64d7b720, id=f.1C26F10799FF3DD3C83792C8044FB33D.d.FD15EFE788894501708E05BEA951194B.e.2768}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1785}, goog:processID: 25304, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1785/devtool..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (eebdedc555663884035d80d308ebbf00)] -&gt; id: artwork_proof4]
+Session ID: eebdedc555663884035d80d308ebbf00
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:174)
 	at tests.admin.AdminLoginTest.uploadArtworkFiles(AdminLoginTest.java:46)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

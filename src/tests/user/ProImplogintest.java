@@ -1,9 +1,12 @@
 package tests.user;
 
+import java.time.Duration;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -51,34 +54,64 @@ public class ProImplogintest extends BaseClass  {
 	    Scanner scanner = new Scanner(System.in);
 
 	    String defaultProduct = "PI22906";
-	    String productToSearch = defaultProduct;
+	    String inputProducts;
 
 	    System.out.println("Do you wish to search for any particular product?");
-	    System.out.println("Press Y to enter product ID OR N to continue with default product (PI22906)");
+	    System.out.println("Press Y to enter product IDs separated by comma OR N to continue with default product (PI22906)");
 
 	    String choice = scanner.nextLine().trim().toUpperCase();
 
 	    if (choice.equals("Y")) {
-	        System.out.println("Enter Product ID:");
-	        productToSearch = scanner.nextLine().trim();
+	        System.out.println("Enter Product IDs separated by comma:");
+	        inputProducts = scanner.nextLine().trim();
+	    } else {
+	        inputProducts = defaultProduct;
 	    }
 
+	    String[] productList = inputProducts.split(",");
+
 	    SearchPage search = new SearchPage(driver);
-	    search.searchProduct(productToSearch);
+	    ProductPage product = new ProductPage(driver);
 
-	    System.out.println("Product searched: " + productToSearch);
+	    for (int i = 0; i < productList.length; i++) {
+
+	        String productId = productList[i].trim();
+
+	        System.out.println("Searching product: " + productId);
+
+	        search.searchProduct(productId);
+
+	        // Configure product
+	        product.selectColor();
+	        product.selectImprintColor("Yellow 116");
+	        product.enterQuantity("101");
+
+	        // Add to cart
+	        product.clickAddToCart();
+
+	        System.out.println("Product added to cart: " + productId);
+
+	        // ✅ Only go to homepage if NOT last product
+	        if (i < productList.length - 1) {
+	            driver.get("https://www.proimprint.com/");
+	        }
+	    }
+
+	    System.out.println("---- LOOP COMPLETED ----");
+	 // 👇 ADD THIS HERE (AFTER LOOP ENDS)
+	    System.out.println("---- LOOP COMPLETED ----");
 	}
-    @Test(priority = 2)
-    public void productSelectionTest() {
+	@Test(priority = 2)
+	public void productSelectionTest() {
 
-        ProductPage product = new ProductPage(driver);
+	    // If not on cart page, navigate
+	    if (!driver.getCurrentUrl().contains("checkout/cart")) {
+	        driver.get("https://www.proimprint.com/index.php?route=checkout/cart");
+	    }
 
-        product.selectColor();
-        product.selectImprintColor("Yellow 116");
-        product.enterQuantity("101");
-        product.clickAddToCart();
-        product.clickProceedToCheckout();
-    }
+	    ProductPage product = new ProductPage(driver);
+	    product.clickProceedToCheckout();
+	}
     @Test(priority = 3)
     public void shippingSelectionTest() {
 

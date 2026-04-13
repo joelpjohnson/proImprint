@@ -2,41 +2,55 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-12T14:20:58 IST" name="Admin Suite" finished-at="2026-03-12T14:21:17 IST" duration-ms="18736">
+  <suite started-at="2026-04-13T16:29:23 IST" name="Admin Suite" finished-at="2026-04-13T16:29:51 IST" duration-ms="27933">
     <groups>
     </groups>
-    <test started-at="2026-03-12T14:20:58 IST" name="Admin Tests" finished-at="2026-03-12T14:21:17 IST" duration-ms="18736">
+    <test started-at="2026-04-13T16:29:23 IST" name="Admin Tests" finished-at="2026-04-13T16:29:51 IST" duration-ms="27933">
       <class name="tests.admin.AdminLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-03-12T14:20:58 IST" name="setUp" finished-at="2026-03-12T14:21:02 IST" duration-ms="4206" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-04-13T16:29:23 IST" name="setUp" finished-at="2026-04-13T16:29:27 IST" duration-ms="4268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="adminLogin()[pri:1, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-03-12T14:21:02 IST" name="adminLogin" finished-at="2026-03-12T14:21:05 IST" duration-ms="2311" status="PASS">
+        <test-method signature="adminLogin()[pri:1, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-04-13T16:29:27 IST" name="adminLogin" finished-at="2026-04-13T16:29:30 IST" duration-ms="3039" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminLogin -->
-        <test-method signature="searchAndOpenOrder()[pri:2, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-03-12T14:21:05 IST" name="searchAndOpenOrder" finished-at="2026-03-12T14:21:14 IST" depends-on-methods="tests.admin.AdminLoginTest.adminLogin" duration-ms="9310" status="PASS">
+        <test-method signature="searchAndOpenOrder()[pri:2, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-04-13T16:29:30 IST" name="searchAndOpenOrder" finished-at="2026-04-13T16:29:40 IST" depends-on-methods="tests.admin.AdminLoginTest.adminLogin" duration-ms="9748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchAndOpenOrder -->
-        <test-method signature="uploadArtworkFiles()[pri:3, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-03-12T14:21:14 IST" name="uploadArtworkFiles" finished-at="2026-03-12T14:21:17 IST" depends-on-methods="tests.admin.AdminLoginTest.searchAndOpenOrder" duration-ms="2795" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="uploadArtworkFiles()[pri:3, instance:tests.admin.AdminLoginTest@3c9754d8]" started-at="2026-04-13T16:29:40 IST" name="uploadArtworkFiles" finished-at="2026-04-13T16:29:51 IST" depends-on-methods="tests.admin.AdminLoginTest.searchAndOpenOrder" duration-ms="10746" status="FAIL">
+          <exception class="org.openqa.selenium.UnhandledAlertException">
             <message>
-              <![CDATA[Cannot locate option with index: 2
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+              <![CDATA[unexpected alert open: {Alert text : SyntaxError: Unexpected token '<'}
+  (Session info: chrome=146.0.7680.178): SyntaxError: Unexpected token '<'
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eebdedc555663884035d80d308ebbf00, sendKeysToElement {value=[Ljava.lang.CharSequence;@64d7b720, id=f.1C26F10799FF3DD3C83792C8044FB33D.d.FD15EFE788894501708E05BEA951194B.e.2768}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1785}, goog:processID: 25304, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1785/devtool..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (eebdedc555663884035d80d308ebbf00)] -> id: artwork_proof4]
+Session ID: eebdedc555663884035d80d308ebbf00]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 2
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token '<'}
+  (Session info: chrome=146.0.7680.178): SyntaxError: Unexpected token '<'
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:318)
-at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:173)
-at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:149)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eebdedc555663884035d80d308ebbf00, sendKeysToElement {value=[Ljava.lang.CharSequence;@64d7b720, id=f.1C26F10799FF3DD3C83792C8044FB33D.d.FD15EFE788894501708E05BEA951194B.e.2768}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1785}, goog:processID: 25304, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1785/devtool..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (eebdedc555663884035d80d308ebbf00)] -> id: artwork_proof4]
+Session ID: eebdedc555663884035d80d308ebbf00
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:174)
 at tests.admin.AdminLoginTest.uploadArtworkFiles(AdminLoginTest.java:46)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -66,7 +80,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadArtworkFiles -->

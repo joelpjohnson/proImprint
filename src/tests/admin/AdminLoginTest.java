@@ -17,7 +17,7 @@ public class AdminLoginTest extends BaseClass {
         driver.get("https://www.proimprint.com/admin/index.php");
 
         AdminLoginPage login = new AdminLoginPage(driver);
-        login.login("joel.j", "q2Zzods0xm");
+        login.login("joel.j", "mggdlw3604");
 
         System.out.println("Admin login successful");
     }

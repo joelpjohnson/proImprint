@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 12 14:20:58 IST 2026</td>
+<td>Started on:</td><td>Mon Apr 13 16:29:23 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18736 ms)</td>
+<tr><td>Total time:</td><td>27 seconds (27933 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,25 +77,45 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.admin.AdminLoginTest.uploadArtworkFiles()'><b>uploadArtworkFiles</b><br>Test class: tests.admin.AdminLoginTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 2
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token &apos;&lt;&apos;}
+  (Session info: chrome=146.0.7680.178): SyntaxError: Unexpected token &apos;&lt;&apos;
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:318)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:173)
-	at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:149)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eebdedc555663884035d80d308ebbf00, sendKeysToElement {value=[Ljava.lang.CharSequence;@64d7b720, id=f.1C26F10799FF3DD3C83792C8044FB33D.d.FD15EFE788894501708E05BEA951194B.e.2768}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1785}, goog:processID: 25304, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1785/devtool..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (eebdedc555663884035d80d308ebbf00)] -&gt; id: artwork_proof4]
+Session ID: eebdedc555663884035d80d308ebbf00
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:174)
 	at tests.admin.AdminLoginTest.uploadArtworkFiles(AdminLoginTest.java:46)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace203409950", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace203409950'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 2
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace187120217", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace187120217'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token &apos;&lt;&apos;}
+  (Session info: chrome=146.0.7680.178): SyntaxError: Unexpected token &apos;&lt;&apos;
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:318)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:173)
-	at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:149)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eebdedc555663884035d80d308ebbf00, sendKeysToElement {value=[Ljava.lang.CharSequence;@64d7b720, id=f.1C26F10799FF3DD3C83792C8044FB33D.d.FD15EFE788894501708E05BEA951194B.e.2768}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\joel.j\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1785}, goog:processID: 25304, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1785/devtool..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (eebdedc555663884035d80d308ebbf00)] -&gt; id: artwork_proof4]
+Session ID: eebdedc555663884035d80d308ebbf00
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at pages.admin.AdminOrderPage.uploadArtworkProofs(AdminOrderPage.java:174)
 	at tests.admin.AdminLoginTest.uploadArtworkFiles(AdminLoginTest.java:46)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -124,7 +144,7 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>2</td>
+<td>10</td>
 <td>tests.admin.AdminLoginTest@3c9754d8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -143,7 +163,7 @@ Driver info: driver.version: unknown
 <tr>
 <td title='tests.admin.AdminLoginTest.adminLogin()'><b>adminLogin</b><br>Test class: tests.admin.AdminLoginTest</td>
 <td></td>
-<td>2</td>
+<td>3</td>
 <td>tests.admin.AdminLoginTest@3c9754d8</td></tr>
 </table><p>
 </body>
